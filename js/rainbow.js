@@ -19,12 +19,12 @@
  * @url rainbowco.de
  */
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
+  if (typeof define === 'function' && define['amd']) {
       // AMD. Register as an anonymous module.
       define([], factory);
   } else {
       // Browser globals
-      root.Rainbow = factory();
+      root['Rainbow'] = factory();
   }
 }(this, function () {
     /**
@@ -731,7 +731,7 @@
          * @param {*} patterns      array of patterns to add on
          * @param {boolean|null} bypass      if true this will bypass the default language patterns
          */
-        extend: function(language, patterns, bypass) {
+        'extend': function(language, patterns, bypass) {
 
             // if there is only one argument then we assume that we want to
             // extend the default language rules
@@ -749,7 +749,7 @@
          *
          * @param {Function} callback
          */
-        onHighlight: function(callback) {
+        'onHighlight': function(callback) {
             onHighlight = callback;
         },
 
@@ -758,7 +758,7 @@
          *
          * @param {string} class_name
          */
-        addClass: function(class_name) {
+        'addClass': function(class_name) {
             global_class = class_name;
         },
 
@@ -767,7 +767,7 @@
          *
          * @returns void
          */
-        color: function() {
+        'color': function() {
 
             // if you want to straight up highlight a string you can pass the string of code,
             // the language, and a callback function
