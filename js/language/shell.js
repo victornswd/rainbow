@@ -63,3 +63,4 @@
             'pattern': /\b(break|case|continue|do|done|elif|else|esac|eval|export|fi|for|function|if|in|local|return|set|then|unset|until|while)(?=\(|\b)/g
         }
     ], true);
+}));
